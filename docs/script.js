@@ -15,9 +15,30 @@ function generatePassword() {
     return "Please enter a number in numerals when prompted for password length"
   }
   var passwordLowercase = confirm("Include lower case characters?");
+  //Uses alert to show verification of the choice
+  if (passwordLowercase === true) {
+    alert("Password can contain lower case letters!")
+  } else {
+    alert("Password will not contain lower case letters.")
+  }
   var passwordUppercase = confirm("Include upper case characters?");
+  if (passwordUppercase === true) {
+    alert("Password can contain upper case letters!")
+  } else {
+    alert("Password will not contain upper case letters.")
+  }
   var passwordNumeric = confirm("Include numbers?");
+  if (passwordNumeric === true) {
+    alert("Password can contain numbers!")
+  } else {
+    alert("Password will not contain numbers.")
+  }
   var passwordSpecial = confirm("Include special characters?");
+  if (passwordSpecial === true) {
+    alert("Password can contain special characters!")
+  } else {
+    alert("Password will not contain special characters.")
+  }
   // Failure state for not including any characters in the password and explanation.
   if (passwordLowercase === false && passwordUppercase === false && passwordNumeric === false && passwordSpecial === false){
     return "Please retry and agree to include at least one of the types of characters"
