@@ -1,2 +1,7 @@
 # JoshuaNelsonModule3PasswordGen
 A program to randomly generate a password.
+
+This program is inelegant, but it works and that is what matters. The javascript uses a prompt to enter the desired password length as that is the one variable that has more complexity than a true false set. The selection of characters is done by sending four confirms which cover the set of upper case, lower case, number and special characters, and the code also uses the alert function to confirm these choices.
+To select the characters that the password can draw from, I used four separate if statements that added the appropriate characters to the string for each that was marked as true by the confirmation messages. This new string actually generates the new password by combining the mathFloor and mathRandom functions to draw random characters from the string. Using a for loop set to repeat according to the length requested of the password ensures that the character length of the password matches the request.
+The contingencies to stop the password generation when something goes wrong are programmed to set the error message in the text box where the password is supposed to appear, and use return to stop the function from continuing when it serves no purpose. The failure states include entering a password length that is not a number in the 8-128 range and setting all of the character selections to false.
+The completed program has been deployed at https://yeshnels.github.io/JoshuaNelsonModule3PasswordGen/ and appears to be fully functional.
